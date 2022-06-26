@@ -14,10 +14,10 @@ class Game:
 
     def __init__(self):
         self.root = Tk()
-        self.root.geometry('318x400')
+        self.root.geometry('350x400')
         self.root.title('Tic Tac Toe || TA Shofian')
-        self.root.maxsize(318,400)
-        self.root.minsize(318,400)
+        self.root.maxsize(350,400)
+        self.root.minsize(350,400)
         self.count = 0
         self.welcome_screen()
         self.root.mainloop()
@@ -133,15 +133,15 @@ class Game:
         else:
             self.l1.config(text= "Saatnya " + self.p2.name + " jalan!")
 
-        b1 = Button(self.game_window_frame,text=' ' ,font=('',15), width=6, height=3, command=lambda: self.on_click(1))
-        b2 = Button(self.game_window_frame,text=' ' ,font=('',15), width=6, height=3, command=lambda: self.on_click(2))
-        b3 = Button(self.game_window_frame,text=' ' ,font=('',15), width=6, height=3, command=lambda: self.on_click(3))
-        b4 = Button(self.game_window_frame,text=' ' ,font=('',15), width=6, height=3, command=lambda: self.on_click(4))
-        b5 = Button(self.game_window_frame,text=' ' ,font=('',15), width=6, height=3, command=lambda: self.on_click(5))
-        b6 = Button(self.game_window_frame,text=' ' ,font=('',15), width=6, height=3, command=lambda: self.on_click(6))
-        b7 = Button(self.game_window_frame,text=' ' ,font=('',15), width=6, height=3, command=lambda: self.on_click(7))
-        b8 = Button(self.game_window_frame,text=' ' ,font=('',15), width=6, height=3, command=lambda: self.on_click(8))
-        b9 = Button(self.game_window_frame,text=' ' ,font=('',15), width=6, height=3, command=lambda: self.on_click(9))
+        b1 = Button(self.game_window_frame,text=' ' ,font=('',15), width=10, height=4, command=lambda: self.on_click(1))
+        b2 = Button(self.game_window_frame,text=' ' ,font=('',15), width=10, height=4, command=lambda: self.on_click(2))
+        b3 = Button(self.game_window_frame,text=' ' ,font=('',15), width=10, height=4, command=lambda: self.on_click(3))
+        b4 = Button(self.game_window_frame,text=' ' ,font=('',15), width=10, height=4, command=lambda: self.on_click(4))
+        b5 = Button(self.game_window_frame,text=' ' ,font=('',15), width=10, height=4, command=lambda: self.on_click(5))
+        b6 = Button(self.game_window_frame,text=' ' ,font=('',15), width=10, height=4, command=lambda: self.on_click(6))
+        b7 = Button(self.game_window_frame,text=' ' ,font=('',15), width=10, height=4, command=lambda: self.on_click(7))
+        b8 = Button(self.game_window_frame,text=' ' ,font=('',15), width=10, height=4, command=lambda: self.on_click(8))
+        b9 = Button(self.game_window_frame,text=' ' ,font=('',15), width=10, height=4, command=lambda: self.on_click(9))
         
         b1.grid(row=1,column=0)
         b2.grid(row=1,column=1)
@@ -155,8 +155,8 @@ class Game:
 
         self.gb_List = [b1,b2,b3,b4,b5,b6,b7,b8,b9]
 
-        Label(self.game_window_frame,text='Tic Tac Toe',font=('',20),
-                bg='#DCE0E1', fg='#000000').grid(row=4,column=0,columnspan=3,pady=10,sticky=EW)
+        # Label(self.game_window_frame,text='Tic Tac Toe',font=('',20),
+        #         bg='#DCE0E1', fg='#000000').grid(row=4,column=0,columnspan=3,pady=10,sticky=EW)
     
     def on_click(self,index):
         if self.game_mode == 1:
@@ -245,9 +245,9 @@ class Game:
                 bg='#DCE0E1', fg='#000000',
                 font=('',15)).pack(pady=30)
         
-        Button(self.massage_frame,text='Rematch',bg='#FFF000', fg='#000000',command=self.rematch).pack(pady=5)
-        Button(self.massage_frame,text='Main Menu',bg='#FFF000', fg='#000000',command=self.main_menu).pack(pady=5)
-        Button(self.massage_frame,text='Exit',bg='#FFF000', fg='#000000',command=self.root.destroy).pack(pady=5)
+        Button(self.massage_frame,text='Main ulang!',bg='#FFF000', fg='#000000',command=self.rematch).pack(pady=5)
+        Button(self.massage_frame,text='Kembali ke Menu',bg='#FFF000', fg='#000000',command=self.main_menu).pack(pady=5)
+        Button(self.massage_frame,text='Keluar',bg='#FFF000', fg='#000000',command=self.root.destroy).pack(pady=5)
         
     def main_menu(self):
         self.game_over = False
