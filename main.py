@@ -1,7 +1,5 @@
 from tkinter import *
-from tkinter import font
 from random import randint
-import time
 
 class Player():
     def __init__(self,name,marker):
@@ -61,7 +59,7 @@ class Game:
             entryList[i].pack(side=LEFT)
             entryList[i].insert(0,f'Pemain {i+1}')
 
-        Label(self.player_info_frame,text="Suit untuk menentukan\npemain mana yang lebih dulu  jalan!",
+        Label(self.player_info_frame,text="Suit untuk menentukan\npemain mana yang lebih dulu jalan!",
                 bg='#DCE0E1', fg='#000000',
                 font=('',10)).pack(pady=20)
 
