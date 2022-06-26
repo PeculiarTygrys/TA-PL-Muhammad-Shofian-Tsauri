@@ -1,3 +1,10 @@
+"""
+Author: Muhammad Shofian Tsauri
+Program ini dibuat untuk memenuhi tugas akhir
+mata kuliah pemrograman lanjut
+Dosen Pengampu: Muhamad Nur Gunawan MBA
+"""
+
 from tkinter import *
 from random import randint
 
