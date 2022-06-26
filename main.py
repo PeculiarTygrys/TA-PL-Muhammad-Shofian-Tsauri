@@ -213,23 +213,28 @@ class Game:
             if self.gb_List[i*3]['text'] == self.gb_List[i*3+1]['text'] == self.gb_List[i*3+2]['text'] == player.marker:
                 self.gb_List[i*3]['bg']=self.gb_List[i*3+1]['bg']=self.gb_List[i*3+2]['bg'] = 'green'
                 self.root.after(500,lambda: self.display_massage('Selamat',f'{player.name} memenangkan permainan!'))
+                self.game_over = True
                 
             # Horizondal matching            
             if self.gb_List[i]['text'] == self.gb_List[i+3]['text'] == self.gb_List[i+6]['text'] == player.marker:
                 self.gb_List[i]['bg']=self.gb_List[i+3]['bg']=self.gb_List[i+6]['bg'] = 'green'
                 self.root.after(500,lambda: self.display_massage('Selamat',f'{player.name} memenangkan permainan!'))
+                self.game_over = True
                 
         # Diagonal matching
         if self.gb_List[0]['text'] == self.gb_List[4]['text'] == self.gb_List[8]['text'] == player.marker:
             self.gb_List[0]['bg']=self.gb_List[4]['bg']=self.gb_List[8]['bg'] = 'green'
             self.root.after(500,lambda: self.display_massage('Selamat',f'{player.name} memenangkan permainan!'))
+            self.game_over = True
             
         if self.gb_List[2]['text'] == self.gb_List[4]['text'] == self.gb_List[6]['text'] == player.marker:
             self.gb_List[2]['bg']=self.gb_List[4]['bg']=self.gb_List[6]['bg'] = 'green'
             self.root.after(500,lambda: self.display_massage('Selamat',f'{player.name} memenangkan permainan!'))
+            self.game_over = True
         
         if self.count == 9 and not self.game_over:
             self.root.after(500,lambda: self.display_massage('Seri!','Alias tidak ada yang menang'))
+            self.game_over = True
     
     def display_massage(self,massage_header,massage):
         self.game_over = True
